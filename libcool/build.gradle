@@ -58,9 +58,9 @@ android {
 dependencies {
     // 在 Android 中进行测试。
     // https://developer.android.com/jetpack/androidx/releases/test?hl=zh-cn
-    testImplementation 'junit:junit:4.13.2'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    testImplementation "junit:junit:4.13.2"
+    androidTestImplementation "androidx.test.ext:junit:1.1.5"
+    androidTestImplementation "androidx.test.espresso:espresso-core:3.5.1"
 
     // https://kotlinlang.org/
     api "org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.10"
@@ -73,11 +73,15 @@ dependencies {
     // https://mvnrepository.com/artifact/com.google.android.material/material
     // https://github.com/material-components/material-components-android
     // https://m2.material.io/develop/android
-    api 'com.google.android.material:material:1.8.0'
+    api "com.google.android.material:material:1.8.0"
+
+    //////////////////////////////////////////////////////////////////androidx begin//////////////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////androidx begin//////////////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////androidx begin//////////////////////////////////////////////////////////////////////
 
     // 在搭载 Android 5 之前版本的设备上部署包含多个 dex 文件的应用。
     // https://developer.android.com/jetpack/androidx/releases/multidex?hl=zh-cn
-    api 'androidx.multidex:multidex:2.0.1'
+    api "androidx.multidex:multidex:2.0.1"
 
     // 针对最新的平台功能和 API 调整应用，同时还支持旧设备。
     // https://developer.android.com/jetpack/androidx/releases/core?hl=zh-cn
@@ -132,7 +136,7 @@ dependencies {
 
     // 用圆角和阴影实现 Material Design 卡片模式。
     // https://mvnrepository.com/artifact/androidx.cardview/cardview
-    api 'androidx.cardview:cardview:1.0.0'
+    api "androidx.cardview:cardview:1.0.0"
 
     // 实现下拉刷新的界面模式。
     // https://developer.android.com/jetpack/androidx/releases/swiperefreshlayout?hl=zh-cn
@@ -153,7 +157,7 @@ dependencies {
     // 读取和写入图片文件 EXIF 标记。
     // https://developer.android.com/jetpack/androidx/releases/exifinterface?hl=zh-cn
     // https://mvnrepository.com/artifact/androidx.exifinterface/exifinterface
-    api 'androidx.exifinterface:exifinterface:1.3.6'
+    api "androidx.exifinterface:exifinterface:1.3.6"
 
     // 向 ListView widget 提供光标数据。
     // https://developer.android.com/jetpack/androidx/releases/cursoradapter?hl=zh-cn
@@ -196,10 +200,10 @@ dependencies {
     api "androidx.lifecycle:lifecycle-process:$lifecycle_version"
     // optional - ReactiveStreams support for LiveData
     api "androidx.lifecycle:lifecycle-reactivestreams-ktx:$lifecycle_version"
-//    // optional - Test helpers for LiveData
-//    testApi "androidx.arch.core:core-testing:$arch_version"
-//    // optional - Test helpers for Lifecycle runtime
-//    testApi "androidx.lifecycle:lifecycle-runtime-testing:$lifecycle_version"
+    // optional - Test helpers for LiveData
+    testApi "androidx.arch.core:core-testing:$arch_version"
+    // optional - Test helpers for Lifecycle runtime
+    testApi "androidx.lifecycle:lifecycle-runtime-testing:$lifecycle_version"
 
     // 构建和组织应用内界面，处理深层链接以及在屏幕之间导航。
     // https://developer.android.com/jetpack/androidx/releases/navigation?hl=zh-cn
@@ -212,8 +216,8 @@ dependencies {
     api "androidx.navigation:navigation-ui-ktx:$nav_version"
     // Feature module Support
     api "androidx.navigation:navigation-dynamic-features-fragment:$nav_version"
-//    // Testing Navigation
-//    androidTestApi "androidx.navigation:navigation-testing:$nav_version"
+    // Testing Navigation
+    androidTestApi "androidx.navigation:navigation-testing:$nav_version"
 //    // Jetpack Compose Integration
 //    api "androidx.navigation:navigation-compose:$nav_version"
 
@@ -242,8 +246,8 @@ dependencies {
     api "androidx.room:room-rxjava3:$room_version"
     // optional - Guava support for Room, including Optional and ListenableFuture
     api "androidx.room:room-guava:$room_version"
-//    // optional - Test helpers
-//    testApi "androidx.room:room-testing:$room_version"
+    // optional - Test helpers
+    testApi "androidx.room:room-testing:$room_version"
     // optional - Paging 3 Integration
     api "androidx.room:room-paging:$room_version"
 
@@ -274,8 +278,8 @@ dependencies {
     api "androidx.work:work-rxjava2:$work_version"
     // optional - GCMNetworkManager support
     api "androidx.work:work-gcm:$work_version"
-//    // optional - Test helpers
-//    androidTestApi "androidx.work:work-testing:$work_version"
+    // optional - Test helpers
+    androidTestApi "androidx.work:work-testing:$work_version"
     // optional - Multiprocess support
     api "androidx.work:work-multiprocess:$work_version"
 
@@ -305,8 +309,8 @@ dependencies {
     api "androidx.security:security-identity-credential:1.0.0-alpha03"
     // For App Authentication APIs
     api "androidx.security:security-app-authenticator:1.0.0-alpha02"
-//    // For App Authentication API testing
-//    androidTestApi "androidx.security:security-app-authenticator:1.0.0-alpha02"
+    // For App Authentication API testing
+    androidTestApi "androidx.security:security-app-authenticator:1.0.0-alpha02"
 
     // 编写可插入组件，这些组件会在进程终止时保存界面状态，并在进程重启时恢复界面状态。
     // https://developer.android.com/jetpack/androidx/releases/savedstate?hl=zh-cn
@@ -327,8 +331,8 @@ dependencies {
     // https://developer.android.com/jetpack/androidx/releases/paging?hl=zh-cn
     def paging_version = "3.1.1"
     api "androidx.paging:paging-runtime:$paging_version"
-//    // alternatively - without Android dependencies for tests
-//    testApi "androidx.paging:paging-common:$paging_version"
+    // alternatively - without Android dependencies for tests
+    testApi "androidx.paging:paging-common:$paging_version"
     // optional - RxJava2 support
     api "androidx.paging:paging-rxjava2:$paging_version"
     // optional - RxJava3 support
@@ -471,32 +475,42 @@ dependencies {
     // To use the Java-compatible @Experimental API annotation
     api "androidx.annotation:annotation-experimental:1.3.0"
 
+    //////////////////////////////////////////////////////////////////androidx end//////////////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////androidx end//////////////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////androidx end//////////////////////////////////////////////////////////////////////
 
-    // https://github.com/bumptech/glide
     // Glide是一个快速高效的Android图片加载库，注重于平滑的滚动。Glide提供了易用的API，高性能、可扩展的图片解码管道（decode pipeline），以及自动的资源池技术。
     // Glide 支持拉取，解码和展示视频快照，图片，和GIF动画。Glide的Api是如此的灵活，开发者甚至可以插入和替换成自己喜爱的任何网络栈。
     // 默认情况下，Glide使用的是一个定制化的基于HttpUrlConnection的栈，但同时也提供了与Google Volley和Square OkHttp快速集成的工具库。
     // 虽然Glide 的主要目标是让任何形式的图片列表的滚动尽可能地变得更快、更平滑，但实际上，Glide几乎能满足你对远程图片的拉取/缩放/显示的一切需求。
-    api 'com.github.bumptech.glide:glide:4.13.0'
-    kapt 'com.github.bumptech.glide:compiler:4.13.0'
+    // https://github.com/bumptech/glide
+    api "com.github.bumptech.glide:glide:4.13.0"
+    kapt "com.github.bumptech.glide:compiler:4.13.0"
     api "com.github.bumptech.glide:okhttp3-integration:4.10.0"
-    // https://github.com/coil-kt/coil
     // Coil 是一个 Android 图片加载库，通过 Kotlin 协程的方式加载图片
+    // https://github.com/coil-kt/coil
     api "io.coil-kt:coil:2.1.0"
-    // https://github.com/square/picasso
     // A powerful image downloading and caching library for Android
+    // https://github.com/square/picasso
     api "com.squareup.picasso:picasso:2.8"
     // Lottie is a mobile library for Android and iOS that parses Adobe After Effects animations exported as json with Bodymovin and renders them natively on mobile!
     // https://github.com/airbnb/lottie-android
     api "com.airbnb.android:lottie:4.1.0"
 
-    // 视频UI层，必须要有
+    // 基础封装视频播放器player，可以在ExoPlayer、MediaPlayer原生MediaPlayer可以自由切换内核；
+    // 该播放器整体架构：播放器内核(自由切换) + 视频播放器 + 边播边缓存 + 高度定制播放器UI视图层。支持视频简单播放，列表播放，仿抖音滑动播放，自动切换播放，使用案例丰富，拓展性强。
+    // https://github.com/yangchong211/YCVideoPlayer
+    //视频UI层，必须要有
     api 'cn.yc:VideoPlayer:3.1.0'
+    // 视频缓存，如果不需要则可以不依赖
+    api 'cn.yc:VideoCache:3.0.5'
     // 视频内核层，必须有
     api 'cn.yc:VideoKernel:3.0.6'
     // 视频播放器播放位置记录，选择性添加
     api 'cn.yc:VideoSqlLite:1.0.2'
+
     // exoplayer
+    // https://github.com/google/ExoPlayer
     api "com.google.android.exoplayer:exoplayer:2.18.3"
 
     // Android权限适配的更优解决方案：
@@ -507,81 +521,166 @@ dependencies {
     // 支持特殊权限(Notification[通知]、SystemAlert[应用悬浮窗]、UNKNOW_SOURCE[未知来源应用安装]、WRITE_SYS_SETTINGS[写入系统设置])的检查与请求
     // 支持系统权限页面跳转
     // 支持debug模式
-    api 'com.github.soulqw:SoulPermission:1.3.1'
+    api "com.github.soulqw:SoulPermission:1.3.1"
+
     // Android 权限请求框架，已适配 Android 13
     // https://github.com/getActivity/XXPermissions
-    api 'com.github.getActivity:XXPermissions:16.6'
+    api "com.github.getActivity:XXPermissions:16.6"
 
     // AndroidUtilCode 🔥 是一个强大易用的安卓工具类库，它合理地封装了安卓开发中常用的函数，具有完善的 Demo 和单元测试，利用其封装好的 APIs 可以大大提高开发效率， 如今它主要包括两部分模块，
     // 其一是主工具类模块：utilcode，其中的工具类是开发中常用到的；
     // 其二是子工具类模块：subutil，它包含的工具类并不是很常用，它的出现是为了防止主工具类的臃肿。 🔥
     // blankj https://github.com/Blankj/AndroidUtilCode
-    api 'com.blankj:utilcodex:1.31.1'
+    api "com.blankj:utilcodex:1.31.1"
 
-    // eventbus
-    api 'org.greenrobot:eventbus:3.3.1'
-    // rxjava2
-    api 'io.reactivex.rxjava2:rxjava:2.2.21'
-    api 'io.reactivex.rxjava2:rxandroid:2.1.1'
-    // rxjava3
-    api "io.reactivex.rxjava3:rxjava:3.1.5"
-    api "io.reactivex.rxjava3:rxandroid:3.0.0"
-    // guava
+    // EventBus is a publish/subscribe event bus for Android and Java.
+    // https://github.com/greenrobot/EventBus
+    api "org.greenrobot:eventbus:3.3.1"
+
+    // RxJava is a Java VM implementation of Reactive Extensions: a library for composing asynchronous and event-based programs by using observable sequences.
+    // It extends the observer pattern to support sequences of data/events and adds operators that allow you to compose sequences together
+    // declaratively while abstracting away concerns about things like low-level threading, synchronization, thread-safety and concurrent data structures.
+    // https://github.com/ReactiveX/RxJava
+    api "io.reactivex.rxjava3:rxjava:3.1.6"
+    // Android specific bindings for RxJava 3.
+    // This module adds the minimum classes to RxJava that make writing reactive components in Android applications easy and hassle-free.
+    // More specifically, it provides a Scheduler that schedules on the main thread or any given Looper.
+    // https://github.com/ReactiveX/RxAndroid
+    api "io.reactivex.rxjava3:rxandroid:3.0.2"
+    // RxKotlin is a lightweight library that adds convenient extension functions to RxJava.
+    // You can use RxJava with Kotlin out-of-the-box, but Kotlin has language features (such as extension functions) that can streamline usage of RxJava even more.
+    // RxKotlin aims to conservatively collect these conveniences in one centralized library, and standardize conventions for using RxJava with Kotlin.
+    // https://github.com/ReactiveX/RxKotlin
+    api "io.reactivex.rxjava3:rxkotlin:3.0.1"
+
+    // Guava is a set of core Java libraries from Google that includes new collection types (such as multimap and multiset), immutable collections, a graph library,
+    // and utilities for concurrency, I/O, hashing, caching, primitives, strings, and more!
+    // It is widely used on most Java projects within Google, and widely used by many other companies as well.
+    // https://github.com/google/guava
     api "com.google.guava:guava:31.1-android"
-    // gson
-    api 'com.google.code.gson:gson:2.9.0'
-    // okhttp
-    api 'com.squareup.okhttp3:okhttp:4.10.0'
-    api 'com.squareup.okio:okio:3.2.0'
-    api 'com.squareup.okhttp3:logging-interceptor:4.10.0'
-    // retrofit
-    api 'com.squareup.retrofit2:retrofit:2.9.0'
-    api 'com.squareup.retrofit2:converter-gson:2.9.0'
-    api 'com.squareup.retrofit2:converter-scalars:2.3.0'
-    api 'com.squareup.retrofit2:adapter-rxjava2:2.7.2'
-    api 'me.jessyan:retrofit-url-manager:1.4.0'
-    // 屏幕适配工具
-    api 'me.jessyan:autosize:1.2.1'
-    // jsoup-html解析
-    api 'org.jsoup:jsoup:1.15.3'
 
-    api 'me.laoyuyu.aria:core:3.8.16'
-    kapt 'me.laoyuyu.aria:compiler:3.8.16'
-    api 'me.laoyuyu.aria:ftp:3.8.16' // 如果需要使用ftp，请增加该组件
-    api 'me.laoyuyu.aria:sftp:3.8.16' // 如果需要使用ftp，请增加该组件
-    api 'me.laoyuyu.aria:m3u8:3.8.16' // 如果需要使用m3u8下载功能，请增加该组件
+    // Gson is a Java library that can be used to convert Java Objects into their JSON representation.
+    // It can also be used to convert a JSON string to an equivalent Java object.
+    // Gson can work with arbitrary Java objects including pre-existing objects that you do not have source-code of.
+    // https://github.com/google/gson
+    api "com.google.code.gson:gson:2.10.1"
 
-    // arouter
-    api 'com.alibaba:arouter-api:1.5.2'
-    kapt 'com.alibaba:arouter-compiler:1.5.2'
+    // HTTP is the way modern applications network. It’s how we exchange data & media. Doing HTTP efficiently makes your stuff load faster and saves bandwidth.
+    // OkHttp is an HTTP client that’s efficient by default:
+    // HTTP/2 support allows all requests to the same host to share a socket.
+    // Connection pooling reduces request latency (if HTTP/2 isn’t available).
+    // Transparent GZIP shrinks download sizes.
+    // Response caching avoids the network completely for repeat requests.
+    // OkHttp perseveres when the network is troublesome: it will silently recover from common connection problems.
+    // If your service has multiple IP addresses, OkHttp will attempt alternate addresses if the first connect fails.
+    // This is necessary for IPv4+IPv6 and services hosted in redundant data centers.
+    // OkHttp supports modern TLS features (TLS 1.3, ALPN, certificate pinning). It can be configured to fall back for broad connectivity.
+    // Using OkHttp is easy. Its request/response API is designed with fluent builders and immutability.
+    // It supports both synchronous blocking calls and async calls with callbacks.
+    // https://github.com/square/okhttp
+    // define a BOM and its version
+    def okhttp3_version = "4.10.0"
+    api(platform("com.squareup.okhttp3:okhttp-bom:$okhttp3_version"))
+    // define any required OkHttp artifacts without version
+    api("com.squareup.okhttp3:okhttp")
+    api("com.squareup.okhttp3:logging-interceptor")
+    testApi("com.squareup.okhttp3:mockwebserver:$okhttp3_version")
+
+    // A type-safe HTTP client for Android and Java.
+    // https://github.com/square/retrofit
+    def retrofit2_version = "2.9.0"
+    api "com.squareup.retrofit2:retrofit:$retrofit2_version"
+    api "com.squareup.retrofit2:converter-gson:$retrofit2_version"
+    api "com.squareup.retrofit2:converter-scalars:$retrofit2_version"
+    api "com.squareup.retrofit2:converter-simplexml:$retrofit2_version"
+    api "com.squareup.retrofit2:adapter-rxjava2:$retrofit2_version"
+
+    // 以最简洁的 Api 让 Retrofit 同时支持多个 BaseUrl 以及动态改变 BaseUrl.
+    // https://github.com/JessYanCoding/RetrofitUrlManager
+    api "me.jessyan:retrofit-url-manager:1.4.0"
+
+    // A low-cost Android screen adaptation solution (今日头条屏幕适配方案终极版，一个极低成本的 Android 屏幕适配方案).
+    // https://github.com/JessYanCoding/AndroidAutoSize
+    api "me.jessyan:autosize:1.2.1"
+
+    // jsoup is a Java library for working with real-world HTML.
+    // It provides a very convenient API for fetching URLs and extracting and manipulating data, using the best of HTML5 DOM methods and CSS selectors.
+    // https://github.com/jhy/jsoup
+    api "org.jsoup:jsoup:1.15.3"
+
+    // Aria项目源于工作中遇到的一个文件下载管理的需求，当时被下载折磨的痛不欲生，从那时起便萌生了编写一个简单易用，稳当高效的下载框架，aria经历了1.0到3.0的开发，算是越来越接近当初所制定的目标了。
+    // https://github.com/AriaLyy/Aria
+    def aria_version = "3.8.16"
+    api "me.laoyuyu.aria:core:$aria_version"
+    kapt "me.laoyuyu.aria:compiler:$aria_version"
+    api "me.laoyuyu.aria:ftp:$aria_version" // 如果需要使用ftp，请增加该组件
+    api "me.laoyuyu.aria:sftp:$aria_version" // 如果需要使用ftp，请增加该组件
+    api "me.laoyuyu.aria:m3u8:$aria_version" // 如果需要使用m3u8下载功能，请增加该组件
+
+    // 帮助 Android App 进行组件化改造的路由框架
+    // https://github.com/alibaba/ARouter
+    api "com.alibaba:arouter-api:1.5.2"
+    kapt "com.alibaba:arouter-compiler:1.5.2"
 
     // 一款针对Android平台下的图片选择器，支持从相册获取图片、视频、音频&拍照，支持裁剪(单图or多图裁剪)、压缩、主题自定义配置等功能，支持动态获取权限&适配Android 5.0+系统的开源图片选择框架。
     // https://github.com/LuckSiege/PictureSelector/blob/version_component/README_CN.md
+    def lucksiege_version = "v3.10.7"
     // PictureSelector 基础 (必须)
-    api 'io.github.lucksiege:pictureselector:v3.10.6'
+    api "io.github.lucksiege:pictureselector:$lucksiege_version"
     // 图片压缩 (按需引入)
-    api 'io.github.lucksiege:compress:v3.10.6'
+    api "io.github.lucksiege:compress:$lucksiege_version"
     // 图片裁剪 (按需引入)
-    api 'io.github.lucksiege:ucrop:v3.10.6'
+    api "io.github.lucksiege:ucrop:$lucksiege_version"
     // 自定义相机 (按需引入)
-    api 'io.github.lucksiege:camerax:v3.10.6'
+    api "io.github.lucksiege:camerax:$lucksiege_version"
+
     // 强大而灵活的RecyclerView Adapter
     // https://github.com/CymChad/BaseRecyclerViewAdapterHelper
 //    api "io.github.cymchad:BaseRecyclerViewAdapterHelper:4.0.0-beta02"
-    api 'com.github.CymChad:BaseRecyclerViewAdapterHelper:3.0.7'
-    // https://github.com/lihangleo2/ShadowLayout
+    api "com.github.CymChad:BaseRecyclerViewAdapterHelper:3.0.10"
+
     // 万能阴影布局
-    api 'com.github.lihangleo2:ShadowLayout:3.3.2'
-    // 轮播依赖
-    api 'com.youth.banner:banner:2.1.0'
+    // 支持定制化阴影：
+    //    1. 随意修改阴影颜色值
+    //    2. 阴影圆角：可统一设置圆角，也可对某几个角单独设置
+    //    3. 阴影x,y偏移量
+    //    4. 随意修改阴影扩散程度,即阴影大小
+    //    5. 隐藏阴影：隐藏某边或多边阴影，或完全隐藏
+    //    6. 可随意代码动态修改阴影
+    //
+    // 不止于阴影；系统shape功能：项目中shape、selector、ripple统统拥有。解放你的双手，清空项目drawable文件夹
+    //    1. shape样式：pressed（按钮点击）、selected（按钮选择）、ripple（点击水波纹）
+    //    2. 背景色设置
+    //    3. stroke边框设置
+    //    4. 渐变色背景色设置
+    //    5. 按钮是否可被点击及不可点击背景
+    //    6. 可绑定textView后，可伴随文案变化，可伴随文案颜色变化
+    //    7. 支持设置图片背景，支持图片selector
+    //
+    // https://github.com/lihangleo2/ShadowLayout
+    api "com.github.lihangleo2:ShadowLayout:3.3.2"
+
+    // 只做一个可以自定义的轮播容器，不侵入UI ———— Banner 2.0
+    // https://github.com/youth5201314/banner
+    api "io.github.youth5201314:banner:2.2.2"
+
     // 一个扩展原生控件支持圆角矩形框背景的库,可以减少相关shape
-    api 'com.flyco.roundview:FlycoRoundView_Lib:1.1.4@aar'
+    // https://github.com/H07000223/FlycoRoundView
+    api "com.flyco.roundview:FlycoRoundView_Lib:1.1.4@aar"
+
     // 圆角图片
-    api 'com.makeramen:roundedimageview:2.3.0'
+    // A fast ImageView (and Drawable) that supports rounded corners (and ovals or circles) based on the original example from Romain Guy.
+    // It supports many additional features including ovals, rounded rectangles, ScaleTypes and TileModes.
+    // https://github.com/vinc3m1/RoundedImageView
+    api "com.makeramen:roundedimageview:2.3.0"
+
     // ImagePreview
-    api 'com.ycjiang:ImagePreview:2.3.5'
-    // RangeSeekBar
-    api 'com.github.Jay-Goo:RangeSeekBar:v3.0.0'
+    api "com.ycjiang:ImagePreview:2.3.5"
+
+    // 一款强大好用的进度条
+    // https://github.com/Jay-Goo/RangeSeekBar
+    api "com.github.Jay-Goo:RangeSeekBar:v3.0.0"
+
     // Views and Drawable for animated GIFs in Android.
     // https://github.com/koral--/android-gif-drawable
     api "pl.droidsonroids.gif:android-gif-drawable:1.2.24"
@@ -600,62 +699,66 @@ dependencies {
     // 支持状态栏沉浸，侧滑打开、拖拽关闭
     // 支持解锁更多姿势，如：拖拽缩放、通知弹窗...
     // https://github.com/princekin-f/EasyFloat
-    api 'com.github.princekin-f:EasyFloat:2.0.4'
+    api "com.github.princekin-f:EasyFloat:2.0.4"
 }
 
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+def isPublishing = true
+if (isPublishing) {
+//////////////////////////////////////////////////////////////////////publishing begin///////////////////////////////////////////////////////////////
 // add publish script
-publishing {
-    publications {
-        release(MavenPublication) {
-            pom {
-                name = 'LibCool'
-                description = 'An Library for Jetpack Compose'
-                url = 'https://github.com/yfcyfc123234/LibCool'
-
-                licenses {
-                    license {
-                        name = 'The Apache License, Version 2.0'
-                        url = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
-                    }
-                }
-
-                developers {
-                    developer {
-                        id = 'yfcyfc123234'
-                        name = 'yfc'
-                        email = 'cfycfy123234@gmail.com'
-                    }
-                }
-
-                scm {
-                    connection = 'https://github.com/yfcyfc123234/LibCool.git'
-                    developerConnection = 'https://github.com/yfcyfc123234/LibCool.git'
+    publishing {
+        publications {
+            release(MavenPublication) {
+                pom {
+                    name = 'LibCool'
+                    description = 'An Library for Jetpack Compose'
                     url = 'https://github.com/yfcyfc123234/LibCool'
+
+                    licenses {
+                        license {
+                            name = 'The Apache License, Version 2.0'
+                            url = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                        }
+                    }
+
+                    developers {
+                        developer {
+                            id = 'yfcyfc123234'
+                            name = 'yfc'
+                            email = 'cfycfy123234@gmail.com'
+                        }
+                    }
+
+                    scm {
+                        connection = 'https://github.com/yfcyfc123234/LibCool.git'
+                        developerConnection = 'https://github.com/yfcyfc123234/LibCool.git'
+                        url = 'https://github.com/yfcyfc123234/LibCool'
+                    }
+                }
+
+                groupId "io.github.yfcyfc123234"
+                artifactId "lib-cool"
+                version "1.0.0"
+
+                afterEvaluate {
+                    from components.release
                 }
             }
-
-            groupId "io.github.yfcyfc123234"
-            artifactId "lib-cool"
-            version "1.0.0"
-
-            afterEvaluate {
-                from components.release
+        }
+        repositories {
+            maven {
+                url "https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/"
+                credentials {
+                    username ossrhUsername // ossrhUsername is your sonatype username
+                    password ossrhPassword // ossrhUsername is your sonatype password
+                }
             }
         }
     }
-    repositories {
-        maven {
-            url "https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/"
-            credentials {
-                username ossrhUsername // ossrhUsername is your sonatype username
-                password ossrhPassword // ossrhUsername is your sonatype password
-            }
-        }
-    }
-}
 
 // signing, this need key, secret, we put it into gradle.properties
-signing {
-    sign publishing.publications.release
+    signing {
+        sign publishing.publications.release
+    }
+//////////////////////////////////////////////////////////////////////publishing end///////////////////////////////////////////////////////////////
 }
