@@ -1,4 +1,4 @@
-package com.cool.yfc
+package com.cool.test
 
 import org.junit.Test
 

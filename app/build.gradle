@@ -5,15 +5,15 @@ plugins {
 }
 
 android {
-    namespace 'com.cool.yfc'
+    namespace 'com.cool.test'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.cool.yfc"
+        applicationId "com.cool.test"
         minSdk 24
         targetSdk 33
-        versionCode 1
-        versionName "1.0"
+        versionCode 100
+        versionName "1.0.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
