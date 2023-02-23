@@ -1,2 +1,2 @@
-# libcool
-libcool
+# LibCool
+LibCool
