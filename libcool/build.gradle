@@ -2,6 +2,9 @@ plugins {
     id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
     id 'org.jetbrains.kotlin.kapt'
+
+    id 'maven-publish'
+    id 'signing'
 }
 
 android {
@@ -598,4 +601,61 @@ dependencies {
     // 支持解锁更多姿势，如：拖拽缩放、通知弹窗...
     // https://github.com/princekin-f/EasyFloat
     api 'com.github.princekin-f:EasyFloat:2.0.4'
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// add publish script
+publishing {
+    publications {
+        release(MavenPublication) {
+            pom {
+                name = 'LibCool'
+                description = 'An Library for Jetpack Compose'
+                url = 'https://github.com/yfcyfc123234/LibCool'
+
+                licenses {
+                    license {
+                        name = 'The Apache License, Version 2.0'
+                        url = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                    }
+                }
+
+                developers {
+                    developer {
+                        id = 'yfcyfc123234'
+                        name = 'yfc'
+                        email = 'cfycfy123234@gmail.com'
+                    }
+                }
+
+                scm {
+                    connection = 'https://github.com/yfcyfc123234/LibCool.git'
+                    developerConnection = 'https://github.com/yfcyfc123234/LibCool.git'
+                    url = 'https://github.com/yfcyfc123234/LibCool'
+                }
+            }
+
+            groupId "io.github.yfcyfc123234"
+            artifactId "lib-cool"
+            version "1.0.0"
+
+            afterEvaluate {
+                from components.release
+            }
+        }
+    }
+    repositories {
+        maven {
+            url "https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/"
+            credentials {
+                username ossrhUsername // ossrhUsername is your sonatype username
+                password ossrhPassword // ossrhUsername is your sonatype password
+            }
+        }
+    }
+}
+
+// signing, this need key, secret, we put it into gradle.properties
+signing {
+    sign publishing.publications.release
 }
