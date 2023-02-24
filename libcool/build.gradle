@@ -700,6 +700,10 @@ dependencies {
     // 支持解锁更多姿势，如：拖拽缩放、通知弹窗...
     // https://github.com/princekin-f/EasyFloat
     api "com.github.princekin-f:EasyFloat:2.0.4"
+
+    // Android TabLayout库
+    // https://github.com/H07000223/FlycoTabLayout
+    api "io.github.h07000223:flycoTabLayout:3.0.0"
 }
 
 def isPublishing = true
@@ -738,7 +742,7 @@ if (isPublishing) {
 
                 groupId "io.github.yfcyfc123234"
                 artifactId "lib-cool"
-                version "1.0.2"
+                version "1.0.3"
 
                 afterEvaluate {
                     from components.release
