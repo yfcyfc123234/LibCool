@@ -601,7 +601,7 @@ dependencies {
 
     // A low-cost Android screen adaptation solution (今日头条屏幕适配方案终极版，一个极低成本的 Android 屏幕适配方案).
     // https://github.com/JessYanCoding/AndroidAutoSize
-    api "me.jessyan:autosize:1.2.1"
+    api "com.github.JessYanCoding:AndroidAutoSize:v1.2.1"
 
     // jsoup is a Java library for working with real-world HTML.
     // It provides a very convenient API for fetching URLs and extracting and manipulating data, using the best of HTML5 DOM methods and CSS selectors.
