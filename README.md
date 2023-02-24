@@ -26,8 +26,9 @@ allprojects {
         maven { url 'https://maven.aliyun.com/repository/apache-snapshots' }
 
         maven { url 'https://jitpack.io' }
-        mavenCentral()
+        maven { url 'https://maven.google.com' }
         maven { url 'https://dl.google.com/dl/android/maven2/' }
+        mavenCentral()
         google()
     }
 }
